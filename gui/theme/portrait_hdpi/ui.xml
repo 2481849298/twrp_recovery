@@ -18,7 +18,8 @@
 		<font name="font_m" filename="RobotoCondensed-Regular.ttf" size="42"/>
 		<font name="font_s" filename="RobotoCondensed-Regular.ttf" size="36"/>
 		<font name="fixed" filename="DroidSansMono.ttf" size="30"/>
-
+	    <image name="background" filename="background" retainaspect="1"/>
+	    
 		<font name="keylabel" filename="RobotoCondensed-Regular.ttf" size="64"/>
 		<font name="keylabel-small" filename="RobotoCondensed-Regular.ttf" size="46"/>
 		<font name="keylabel-longpress" filename="RobotoCondensed-Regular.ttf" size="32"/>
@@ -240,6 +241,13 @@
 
 	<templates>
 		<template name="page">
+			<!--<background color="%background_color%"/>-->
+			
+			
+	<image>
+	     <image resource="background"/>
+	</image>
+
 			<background color="%background_color%"/>
 
 			<fill color="%accent_color%">

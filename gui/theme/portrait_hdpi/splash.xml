@@ -12,6 +12,7 @@
 		<font name="font_l" filename="RobotoCondensed-Regular.ttf" size="52"/>
 		<image name="splashlogo" filename="splashlogo" retainaspect="1"/>
 		<image name="splashteamwin" filename="splashteamwin" retainaspect="1"/>
+		<image name="mimi" filename="mimi" retainaspect="1"/>
 	</resources>
 
 	<variables>
@@ -40,10 +41,15 @@
 				<placement x="540" y="1540" placement="4"/>
 			</image>
 
+			<image>
+				<image resource="mimi"/>
+				<placement x="540" y="1020" placement="4"/>
+			</image>
+			
 			<text color="%header_color%">
 				<font resource="font_l"/>
 				<placement x="540" y="1590" placement="5"/>
-				<text>Recovery Project %tw_version%</text>
+				<text>TWRP%tw_version%</text>
 			</text>
 		</page>
 	</pages>

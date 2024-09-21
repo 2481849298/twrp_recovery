@@ -43,7 +43,7 @@
 			<text color="%header_color%">
 				<font resource="font_l"/>
 				<placement x="240" y="680" placement="5"/>
-				<text>Recovery Project %tw_version%</text>
+				<text>Recovery Project</text>
 			</text>
 		</page>
 	</pages>
