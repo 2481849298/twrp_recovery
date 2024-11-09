@@ -3874,8 +3874,8 @@
 				<listitem name="{@install_magisk=Install Magisk}">
 					<actions>
 						<action function="set">tw_back=advanced</action>
-						<action function="set">tw_customZipVerPath=/customzip/Magisk/MagiskVer</action>
-						<action function="set">tw_customZipPath=/customzip/Magisk/Magisk.apk</action>
+						<action function="set">tw_customZipVerPath=/customzip/Magisk/magiskVer</action>
+						<action function="set">tw_customZipPath=/customzip/Magisk/Magisk.zip</action>
 						<action function="preCustomFlashzip"/>
 						<action function="set">tw_action=customFlashzip</action>
 						<action function="set">tw_slider_text={@swipe_to_confirm=Swipe to Confirm}</action>
