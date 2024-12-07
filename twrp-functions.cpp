@@ -426,6 +426,23 @@ bool TWFunc::Wait_For_File(const string& path, std::chrono::nanoseconds timeout)
 	return false;
 }
 
+bool TWFunc::File_Exists(const string& path)
+{
+	struct stat st;
+
+	if (stat(path.c_str(), &st) == 0) {
+		return !S_ISDIR(st.st_mode);
+	}
+	return false;
+}
+
+void TWFunc::Screenshot(const string& path)
+{
+	int res = gr_save_screenshot(path.c_str());
+	if (res == 0) {
+		chmod(path.c_str(), 0777);
+	}
+}
 
 #ifndef BUILD_TWRPTAR_MAIN
 
@@ -595,6 +612,7 @@ void TWFunc::Update_Log_File(void) {
 			}
 		}
 	}
+	if (TWFunc::File_Exists("/data/cache/command")) remove("/data/cache/command");
 	sync();
 }
 
