@@ -426,13 +426,6 @@ bool TWFunc::Wait_For_File(const string& path, std::chrono::nanoseconds timeout)
 	return false;
 }
 
-void TWFunc::Screenshot(const string& path)
-{
-	int res = gr_save_screenshot(path.c_str());
-	if (res == 0) {
-		chmod(path.c_str(), 0777);
-	}
-}
 
 #ifndef BUILD_TWRPTAR_MAIN
 
