@@ -426,6 +426,14 @@ bool TWFunc::Wait_For_File(const string& path, std::chrono::nanoseconds timeout)
 	return false;
 }
 
+void TWFunc::Screenshot(const string& path)
+{
+	int res = gr_save_screenshot(path.c_str());
+	if (res == 0) {
+		chmod(path.c_str(), 0777);
+	}
+}
+
 #ifndef BUILD_TWRPTAR_MAIN
 
 // Returns "/path" from a full /path/to/file.name
@@ -435,6 +443,7 @@ string TWFunc::Get_Root_Path(const string& Path) {
 	// Make sure that we have a leading slash
 	if (Local_Path.substr(0, 1) != "/")
 		Local_Path = "/" + Local_Path;
+
 
 	// Trim the path to get the root path only
 	size_t position = Local_Path.find("/", 2);

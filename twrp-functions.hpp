@@ -75,7 +75,8 @@ public:
 	static timespec timespec_diff(timespec& start, timespec& end);	            // Return a diff for 2 times
 	static int32_t timespec_diff_ms(timespec& start, timespec& end);            // Returns diff in ms
 	static bool Wait_For_File(const string& path, std::chrono::nanoseconds timeout); // Wait For File, True is success, False is timeout;
-
+	static void Screenshot(const string& path);                                 // Screenshot
+	
 #ifndef BUILD_TWRPTAR_MAIN
 	static int Recursive_Mkdir(string Path);                                    // Recursively makes the entire path
 	static void GUI_Operation_Text(string Read_Value, string Default_Text);     // Updates text for display in the GUI, e.g. Backing up %partition name%
