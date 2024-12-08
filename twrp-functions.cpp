@@ -64,6 +64,7 @@
 	#include "openaes/inc/oaes_lib.h"
 #endif
 #include "set_metadata.h"
+#include "minuitwrp/minui.h"
 
 extern "C" {
 	#include "libcrecovery/common.h"
